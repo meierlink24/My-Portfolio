@@ -1,0 +1,145 @@
+/* General Reset & Typography */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Top Navigation Menu */
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+#menu-cont {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#menu-cont button {
+  padding: 10px 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#menu-cont button:hover {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
+
+/* Main Content Area */
+#content {
+  max-width: 960px;
+  margin: 100px auto 80px auto; /* Space for top menu and bottom footer */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Optional styling for home paragraph */
+#home-p {
+  margin-top: 50px;
+}
+
+/* Footer Social Menu */
+#social-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f8f8f8;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+#social-footer .social-btns {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-btn {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.social-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.social-btn:hover {
+  transform: scale(1.1);
+  border-color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #menu-cont {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #menu {
+    padding: 15px 0;
+  }
+
+  #content {
+    margin: 140px auto 100px auto;
+    padding: 15px;
+    width: 90%;
+  }
+
+  #social-footer .social-btns {
+    width: 90%;
+  }
+
+  .social-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .social-btn img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #content {
+    width: 95%;
+  }
+
+  #social-footer .social-btns {
+    width: 95%;
+  }
+}
